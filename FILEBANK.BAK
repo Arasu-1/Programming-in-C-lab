@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+char name[20],branch[20],acctype[10];
+long int accno;
+FILE*fp;
+clrscr();
+fp=fopen("AM Bank.txt","a");
+printf("Enter name:");
+scanf("%s",name);
+printf("Enter account no:");
+scanf("%ld",&accno);
+printf("Enter branch:");
+scanf("%s",branch);
+printf("Enter account type:");
+scanf("%s",acctype);
+fprintf(fp,"\n\t%s\t%ld\t%s\t%s\n",name,accno,branch,acctype);
+fclose(fp);
+getch();
+}
